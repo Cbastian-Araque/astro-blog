@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import "../styles/global.css";
-import Footer from '../components/Footer.astro';
+import Footer from "../components/Footer.astro";
 
 const indexTitle: string = "Página de inicio";
 ---
@@ -20,5 +20,9 @@ const indexTitle: string = "Página de inicio";
 
     <h1>{indexTitle}</h1>
     <Footer />
+
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>
