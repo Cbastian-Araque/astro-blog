@@ -1,7 +1,8 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi tercera publicación en el blog
 author: Cbastian Araque
-description: "Tuve algunos problemas, pero preguntar en la comunidad me ayudó mucho."
+description: "Tercer post en el blog de Astro."
 image:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "El logotipo de Astro sobre un fondo oscuro con rayos de colores del arcoíris."
