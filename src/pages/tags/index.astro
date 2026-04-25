@@ -16,7 +16,7 @@ const tags = [
     {
       tags.map((tag) => (
         <li class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+          <a href={`${import.meta.env.BASE_URL}tags/${encodeURIComponent(tag)}/`}>{tag}</a>
         </li>
       ))
     }
