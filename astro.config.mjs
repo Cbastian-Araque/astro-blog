@@ -1,8 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
+import preact from "@astrojs/preact";
+
 // https://astro.build/config
 export default defineConfig({
-  site: "https://cbastian-araque.github.io", // Ej: GH Pages, Netlify, Heroku, etc...
-  base: "/astro-blog/" // Carpeta de alojamiento
+  // Ej: GH Pages, Netlify, Heroku, etc...
+  site: "https://cbastian-araque.github.io",
+
+  // Carpeta de alojamiento
+  base: "/astro-blog/",
+
+  integrations: [preact()]
 });
