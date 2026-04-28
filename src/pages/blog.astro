@@ -1,16 +1,26 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+const allPosts = await getCollection("blog");
 
-const blogTitle: string = 'Blog Astro';
+const blogTitle: string = "Blog Astro";
 ---
 
-<BaseLayout pageTitle="Blog Astro">
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint saepe expedita magnam. Est quasi qui iste a ipsum delectus iure aut sapiente vel maiores labore voluptates, aperiam autem fuga deserunt voluptatibus quia reprehenderit dolores perferendis atque non. Aliquam, velit?</p>
+<BaseLayout pageTitle={blogTitle}>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sint
+    saepe expedita magnam. Est quasi qui iste a ipsum delectus iure aut sapiente
+    vel maiores labore voluptates, aperiam autem fuga deserunt voluptatibus quia
+    reprehenderit dolores perferendis atque non. Aliquam, velit?
+  </p>
 
-    <ul>
-      {allPosts.map((post: any) => <BlogPost enlace={post.url} titulo={post.frontmatter.title}></BlogPost>)}
-    </ul>
+  <ul>
+    {
+      allPosts.map((post: any) => (
+        <BlogPost enlace={`${import.meta.env.BASE_URL}posts/${post.id}`} titulo={post.data.title} />
+      ))
+    }
+  </ul>
 </BaseLayout>

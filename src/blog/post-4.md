@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi cuarta entrada en el blog
 author: Otro autor
 description: "Esta entrada aparecerá sola!"

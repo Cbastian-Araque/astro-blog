@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi segunda publicación en el blog
 author: Cbastian Araque
 description: "Después de aprender un poco de Astro, ¡no podía parar!"
